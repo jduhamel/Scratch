@@ -12,6 +12,5 @@ accounts = mail.accounts.get
 archive_folder = mail.accounts["KVH"].mailboxes["Archive"]
 messages = archive_folder.messages.get
 messages.each do |m|
-  pp m
-  puts "Subject - #{m.subject}"
+  puts "#{m.sender.get} Subject - #{m.subject.get}"
 end
